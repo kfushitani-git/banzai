@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { X, Calendar, CheckCircle2, Sparkles, Building, Mail, Phone, User, ArrowRight, Video } from "lucide-react";
 import confetti from "canvas-confetti";
+import { CONTACT_EMAIL } from "@/lib/site";
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -38,6 +40,27 @@ export default function BookingModal({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const lines = [
+      `貴社名：${formData.companyName}`,
+      `お名前：${formData.name}`,
+      `メール：${formData.email}`,
+      `電話：${formData.phone || "（未記入）"}`,
+      `オフィス所在地：${formData.location}`,
+      `検討プラン：${formData.planInterest}`,
+      "",
+      "ご相談内容：",
+      formData.message || "（未記入）",
+    ];
+    const subject = `【研修のご相談】${formData.companyName || "お問い合わせ"}`;
+    const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(lines.join("\n"))}`;
+
+    if (typeof window !== "undefined") {
+      window.location.href = mailto;
+    }
+
     setIsSubmitted(true);
     try {
       confetti({
@@ -230,7 +253,11 @@ export default function BookingModal({
               </div>
 
               <p className="text-[11px] text-zinc-400 text-center">
-                ※ 強引な営業やセールスは一切行いません。プライバシー情報は厳重に管理いたします。
+                ※ 強引な営業やセールスは一切行いません。ご入力内容は
+                <Link href="/privacy" target="_blank" className="underline hover:text-zinc-600">
+                  プライバシーポリシー
+                </Link>
+                に沿って取り扱います。
               </p>
             </form>
           ) : (
@@ -239,13 +266,16 @@ export default function BookingModal({
                 <CheckCircle2 className="w-8 h-8" />
               </div>
               <h4 className="text-lg font-bold text-zinc-900">
-                お申し込みを受け付けました
+                メールソフトを開きました
               </h4>
               <p className="mt-2 text-xs text-zinc-600 leading-relaxed max-w-sm mx-auto">
-                ご入力いただいたメールアドレス（{formData.email}）へ、
-                {isSeminar
-                  ? "Zoom参加URLと詳細メールをお送りいたしました。"
-                  : "担当コンサルタントより日程調整のご案内を即日お送りいたします。"}
+                入力内容を差し込んだメールが立ち上がります。内容をご確認のうえ
+                <strong> そのまま送信 </strong>
+                してください。担当（伏谷）より折り返しご連絡します。
+                <br />
+                <span className="text-[11px] text-zinc-400">
+                  メールが開かない場合は {CONTACT_EMAIL} まで直接ご連絡ください。
+                </span>
               </p>
 
               <div className="mt-5">

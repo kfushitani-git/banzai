@@ -14,7 +14,8 @@ export default function Navbar({ onOpenBooking, onOpenDiagnosis }: NavbarProps) 
 
   const navLinks = [
     { name: "特長", href: "#features" },
-    { name: "対面研修の強み", href: "#handson" },
+    { name: "セミナー", href: "#seminar" },
+    { name: "研修の強み", href: "#handson" },
     { name: "カリキュラム", href: "#curriculum" },
     { name: "プラン", href: "#pricing" },
     { name: "FAQ", href: "#faq" },
@@ -35,7 +36,7 @@ export default function Navbar({ onOpenBooking, onOpenDiagnosis }: NavbarProps) 
               priority
             />
           </div>
-          <div className="hidden sm:flex flex-col border-l border-zinc-200 pl-3">
+          <div className="hidden xl:flex flex-col border-l border-zinc-200 pl-3">
             <span className="text-[11px] font-bold text-red-600 tracking-wide">
               岡山特化・対面講師派遣型
             </span>
@@ -46,7 +47,7 @@ export default function Navbar({ onOpenBooking, onOpenDiagnosis }: NavbarProps) 
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-zinc-600">
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-6 text-sm font-medium text-zinc-600">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -77,7 +78,7 @@ export default function Navbar({ onOpenBooking, onOpenDiagnosis }: NavbarProps) 
           </button>
 
           {/* Mobile Hamburger Button */}
-          <div className="flex md:hidden">
+          <div className="flex lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-zinc-600 hover:text-zinc-900 focus:outline-none"
@@ -91,7 +92,7 @@ export default function Navbar({ onOpenBooking, onOpenDiagnosis }: NavbarProps) 
 
       {/* Mobile Drawer */}
       {isMobileMenuOpen && (
-        <div className="md:hidden border-b border-zinc-200 bg-white px-5 py-5 shadow-lg">
+        <div className="lg:hidden border-b border-zinc-200 bg-white px-5 py-5 shadow-lg">
           <nav className="flex flex-col gap-3.5 text-sm font-medium text-zinc-700">
             {navLinks.map((link) => (
               <a

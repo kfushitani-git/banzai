@@ -1,16 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { Sparkles, Calendar, Video, X, ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
+import { Sparkles, X, ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
+import { SEMINAR } from "@/lib/site";
 
 interface FloatingWidgetsProps {
   onOpenDiagnosisModal: () => void;
-  onOpenSeminarModal: () => void;
+  onOpenSeminar: () => void;
 }
 
 export default function FloatingWidgets({
   onOpenDiagnosisModal,
-  onOpenSeminarModal,
+  onOpenSeminar,
 }: FloatingWidgetsProps) {
   const [isBannerVisible, setIsBannerVisible] = useState(true);
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -41,7 +42,7 @@ export default function FloatingWidgets({
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
               </span>
               <span className="text-[11px] font-extrabold text-red-600 tracking-wide uppercase">
-                次回オンライン無料セミナー
+                無料オンラインセミナー {SEMINAR.dateShort}
               </span>
             </div>
 
@@ -66,21 +67,21 @@ export default function FloatingWidgets({
           {!isCollapsed ? (
             <div>
               <h4 className="text-xs sm:text-sm font-bold text-zinc-900 leading-snug">
-                【岡山・全国】Google Workspace × Gemini 実践ライブデモ体験会
+                {SEMINAR.title}
               </h4>
               <p className="mt-1 text-[11px] text-zinc-500 line-clamp-2">
-                Gmail要約やスプレッドシート集計など、実際の画面で効果を体感できる60分の無料体験会。
+                {SEMINAR.subtitle}。Gmail要約やスプレッドシート集計を実際の画面で見せる60分。
               </p>
 
               <div className="mt-2.5 flex items-center justify-between gap-2">
                 <div className="text-[10px] text-zinc-600 font-medium">
-                  Zoom開催 / カメラOFF・途中退場可
+                  {SEMINAR.date.replace("2026年", "")} {SEMINAR.time} / {SEMINAR.fee}
                 </div>
                 <button
-                  onClick={onOpenSeminarModal}
+                  onClick={onOpenSeminar}
                   className="inline-flex items-center gap-1 rounded-full bg-zinc-900 px-3 py-1.5 text-xs font-bold text-white shadow-sm hover:bg-red-600 transition active:scale-95 shrink-0"
                 >
-                  詳細・参加予約
+                  申し込む
                   <ArrowRight className="w-3 h-3" />
                 </button>
               </div>
@@ -88,13 +89,13 @@ export default function FloatingWidgets({
           ) : (
             <div className="flex items-center justify-between">
               <span className="text-xs font-bold text-zinc-800">
-                Google × Gemini 無料体験会（Zoom）
+                無料セミナー {SEMINAR.dateShort} {SEMINAR.time}
               </span>
               <button
-                onClick={onOpenSeminarModal}
+                onClick={onOpenSeminar}
                 className="text-xs font-bold text-red-600 hover:underline"
               >
-                予約する
+                申し込む
               </button>
             </div>
           )}

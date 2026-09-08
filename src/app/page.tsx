@@ -4,6 +4,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import PainPointsSection from "@/components/PainPointsSection";
+import SeminarSection from "@/components/SeminarSection";
 import HandsOnSection from "@/components/HandsOnSection";
 import CurriculumSection from "@/components/CurriculumSection";
 import PricingSection from "@/components/PricingSection";
@@ -15,11 +16,11 @@ import BookingModal from "@/components/BookingModal";
 import AiDiagnosisModal from "@/components/AiDiagnosisModal";
 import FloatingWidgets from "@/components/FloatingWidgets";
 import InstructorSection from "@/components/InstructorSection";
+import { SEMINAR_FORM_URL } from "@/lib/site";
 
 export default function Home() {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const [isDiagnosisModalOpen, setIsDiagnosisModalOpen] = useState(false);
-  const [modalType, setModalType] = useState<"booking" | "seminar">("booking");
   const [diagnosisData, setDiagnosisData] = useState<{
     workTimeSaved?: string;
     recommendedPlan?: string;
@@ -28,13 +29,13 @@ export default function Home() {
   } | null>(null);
 
   const handleOpenBooking = () => {
-    setModalType("booking");
     setIsBookingModalOpen(true);
   };
 
   const handleOpenSeminar = () => {
-    setModalType("seminar");
-    setIsBookingModalOpen(true);
+    if (typeof window !== "undefined") {
+      window.open(SEMINAR_FORM_URL, "_blank", "noopener,noreferrer");
+    }
   };
 
   const handleOpenDiagnosis = () => {
@@ -49,7 +50,6 @@ export default function Home() {
   }) => {
     setDiagnosisData(result);
     setIsDiagnosisModalOpen(false);
-    setModalType("booking");
     setIsBookingModalOpen(true);
   };
 
@@ -72,6 +72,9 @@ export default function Home() {
 
       {/* Problem / Pain Points */}
       <PainPointsSection />
+
+      {/* Free intro seminar (9/24) */}
+      <SeminarSection onOpenSeminar={handleOpenSeminar} />
 
       {/* Hands-on Onsite Training Values (Okayama Office Dispatch) */}
       <HandsOnSection
@@ -104,7 +107,7 @@ export default function Home() {
       {/* Floating Seminar Banner & Diagnosis Button (Fixed Bottom-Right) */}
       <FloatingWidgets
         onOpenDiagnosisModal={handleOpenDiagnosis}
-        onOpenSeminarModal={handleOpenSeminar}
+        onOpenSeminar={handleOpenSeminar}
       />
 
       {/* 30-Sec Interactive AI Diagnosis Modal */}
@@ -114,11 +117,11 @@ export default function Home() {
         onApplyWithDiagnosis={handleApplyWithDiagnosis}
       />
 
-      {/* Consultation & Seminar Booking Modal */}
+      {/* Consultation Booking Modal */}
       <BookingModal
         isOpen={isBookingModalOpen}
         onClose={() => setIsBookingModalOpen(false)}
-        type={modalType}
+        type="booking"
         initialData={diagnosisData}
       />
     </main>

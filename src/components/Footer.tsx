@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -23,12 +24,13 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center md:justify-end gap-6 text-zinc-600 font-medium">
-            <a href="#features" className="hover:text-red-600 transition">特長</a>
-            <a href="#handson" className="hover:text-red-600 transition">対面研修の強み</a>
-            <a href="#curriculum" className="hover:text-red-600 transition">カリキュラム</a>
-            <a href="#pricing" className="hover:text-red-600 transition">プラン</a>
-            <a href="#faq" className="hover:text-red-600 transition">FAQ</a>
+          <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-zinc-600 font-medium">
+            <Link href="/#seminar" className="hover:text-red-600 transition">無料セミナー</Link>
+            <Link href="/#handson" className="hover:text-red-600 transition">対面研修の強み</Link>
+            <Link href="/#curriculum" className="hover:text-red-600 transition">カリキュラム</Link>
+            <Link href="/#pricing" className="hover:text-red-600 transition">プラン</Link>
+            <Link href="/#faq" className="hover:text-red-600 transition">FAQ</Link>
+            <Link href="/privacy" className="hover:text-red-600 transition">プライバシーポリシー</Link>
           </div>
         </div>
 
