@@ -30,13 +30,13 @@ export default function PainPointsSection() {
     <section id="features" className="py-16 sm:py-24 bg-zinc-950 text-white relative overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-1.5 rounded-full bg-zinc-900 border border-zinc-800 px-3.5 py-1 text-xs font-bold text-orange-400 mb-3">
+          <div className="inline-flex items-center gap-1.5 rounded-full bg-zinc-900 border border-zinc-800 px-3.5 py-1 text-xs font-bold text-red-400 mb-3">
             <AlertCircle className="w-3.5 h-3.5" />
             岡山県内の企業様からよくいただくご相談
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
             多くの企業が「AIを導入しただけ」で<br />
-            <span className="text-orange-500">現場の活用が進まない壁</span>に直面しています
+            <span className="text-red-500">現場の活用が進まない壁</span>に直面しています
           </h2>
           <p className="mt-4 text-sm sm:text-base text-zinc-400">
             最新ツールを契約しても、現場の社員が「自分の業務でどう使うか」を体感しなければ定着しません。
@@ -51,11 +51,11 @@ export default function PainPointsSection() {
               className="rounded-2xl border border-zinc-800 bg-zinc-900/80 p-6 transition hover:border-zinc-700"
             >
               <div className="flex items-start gap-4">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-zinc-800 text-orange-500 border border-zinc-700">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-zinc-800 text-red-500 border border-zinc-700">
                   <X className="w-4 h-4 stroke-[3]" />
                 </div>
                 <div>
-                  <span className="inline-block text-[10px] font-bold text-orange-400 bg-orange-950/40 px-2 py-0.5 rounded border border-orange-900/50 mb-2">
+                  <span className="inline-block text-[10px] font-bold text-red-400 bg-red-950/40 px-2 py-0.5 rounded border border-red-900/50 mb-2">
                     {pain.tag}
                   </span>
                   <h3 className="text-base font-bold text-zinc-100 leading-snug">
@@ -73,10 +73,10 @@ export default function PainPointsSection() {
         {/* Transition Bridge */}
         <div className="mt-14 text-center">
           <div className="inline-flex flex-col items-center">
-            <span className="text-xs sm:text-sm font-semibold text-orange-400 mb-2">
-              そのお悩み、banz-AIが対面ハンズオンで解決します
+            <span className="text-xs sm:text-sm font-semibold text-red-400 mb-2">
+              そのお悩み、FUSHITANIのAI研修が対面ハンズオンで解決します
             </span>
-            <div className="w-8 h-8 rounded-full bg-zinc-900 flex items-center justify-center text-orange-500 border border-zinc-800 animate-bounce">
+            <div className="w-8 h-8 rounded-full bg-zinc-900 flex items-center justify-center text-red-500 border border-zinc-800 animate-bounce">
               <ArrowDown className="w-4 h-4" />
             </div>
           </div>

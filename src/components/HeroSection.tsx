@@ -16,15 +16,15 @@ export default function HeroSection({ onOpenBooking, onOpenDiagnosis }: HeroSect
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Top Location & Focus Badge */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-orange-200 bg-orange-50/80 px-3.5 py-1 text-xs font-bold text-orange-800 shadow-xs">
-            <span className="h-2 w-2 rounded-full bg-orange-600"></span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-red-200 bg-red-50/80 px-3.5 py-1 text-xs font-bold text-red-800 shadow-xs">
+            <span className="h-2 w-2 rounded-full bg-red-600"></span>
             岡山でGoogle Workspace・Gemini活用なら
           </span>
           <span className="inline-flex items-center gap-1 rounded-full bg-zinc-900 text-white px-3 py-1 text-xs font-semibold">
             Google AI Professional 認定講師
           </span>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-zinc-300 bg-white text-zinc-800 px-3 py-1 text-xs font-bold">
-            <CheckCircle2 className="w-3.5 h-3.5 text-orange-600" />
+            <CheckCircle2 className="w-3.5 h-3.5 text-red-600" />
             Google Workspace Standard 導入企業様に最適
           </span>
         </div>
@@ -33,7 +33,7 @@ export default function HeroSection({ onOpenBooking, onOpenDiagnosis }: HeroSect
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-3xl font-black tracking-tight text-zinc-950 sm:text-5xl lg:text-6xl leading-[1.2] sm:leading-[1.16]">
             社内のGoogle Workspaceが、<br className="hidden sm:inline" />
-            明日から<span className="text-orange-600">最強のAIアシスタント</span>に変わる。
+            明日から<span className="text-red-600">最強のAIアシスタント</span>に変わる。
           </h1>
           
           <p className="mt-6 text-base sm:text-xl text-zinc-600 leading-relaxed max-w-3xl mx-auto font-normal">
@@ -47,7 +47,7 @@ export default function HeroSection({ onOpenBooking, onOpenDiagnosis }: HeroSect
         <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3.5 max-w-lg mx-auto">
           <button
             onClick={onOpenBooking}
-            className="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2.5 rounded-full bg-orange-600 px-8 py-4 text-base font-bold text-white shadow-lg shadow-orange-600/20 transition-all hover:bg-orange-700 active:scale-98"
+            className="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2.5 rounded-full bg-red-600 px-8 py-4 text-base font-bold text-white shadow-lg shadow-red-600/20 transition-all hover:bg-red-700 active:scale-98"
           >
             <Calendar className="w-5 h-5" />
             <span>【無料】プラン・お見積り相談</span>
@@ -58,7 +58,7 @@ export default function HeroSection({ onOpenBooking, onOpenDiagnosis }: HeroSect
             onClick={onOpenDiagnosis}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-zinc-300 bg-white px-6 py-4 text-sm font-bold text-zinc-800 shadow-xs transition hover:bg-zinc-50 hover:border-zinc-400"
           >
-            <Sparkles className="w-4 h-4 text-orange-600" />
+            <Sparkles className="w-4 h-4 text-red-600" />
             <span>30秒AI削減診断</span>
           </button>
         </div>
@@ -70,7 +70,7 @@ export default function HeroSection({ onOpenBooking, onOpenDiagnosis }: HeroSect
         {/* Trust Badges */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto">
           <div className="flex items-center gap-3 rounded-2xl bg-zinc-50 p-3.5 border border-zinc-200">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-100 text-orange-600">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-100 text-red-600">
               <Award className="w-5 h-5" />
             </div>
             <div>
@@ -90,7 +90,7 @@ export default function HeroSection({ onOpenBooking, onOpenDiagnosis }: HeroSect
           </div>
 
           <div className="flex items-center gap-3 rounded-2xl bg-zinc-50 p-3.5 border border-zinc-200">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-100 text-orange-600">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-100 text-red-600">
               <Clock className="w-5 h-5" />
             </div>
             <div>
@@ -119,14 +119,14 @@ export default function HeroSection({ onOpenBooking, onOpenDiagnosis }: HeroSect
               <div className="h-2.5 w-2.5 rounded-full bg-zinc-300" />
               <span className="ml-2 text-xs font-mono text-zinc-400">Google Workspace Standard × Gemini in Action</span>
             </div>
-            <div className="text-xs font-bold text-orange-600 bg-orange-50 px-2.5 py-0.5 rounded-full border border-orange-200">
+            <div className="text-xs font-bold text-red-600 bg-red-50 px-2.5 py-0.5 rounded-full border border-red-200">
               FUSHITANI株式会社 自社実践実証済み
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="rounded-2xl border border-zinc-100 bg-zinc-50/70 p-4 transition hover:border-orange-300 hover:bg-white">
-              <span className="text-xs font-bold text-orange-700 bg-orange-100/70 px-2 py-0.5 rounded">
+            <div className="rounded-2xl border border-zinc-100 bg-zinc-50/70 p-4 transition hover:border-red-300 hover:bg-white">
+              <span className="text-xs font-bold text-red-700 bg-red-100/70 px-2 py-0.5 rounded">
                 Gmail & Docs
               </span>
               <h3 className="text-sm font-bold text-zinc-900 mt-2">メール返信＆報告書・議事録の即時作成</h3>
@@ -135,7 +135,7 @@ export default function HeroSection({ onOpenBooking, onOpenDiagnosis }: HeroSect
               </p>
             </div>
 
-            <div className="rounded-2xl border border-zinc-100 bg-zinc-50/70 p-4 transition hover:border-orange-300 hover:bg-white">
+            <div className="rounded-2xl border border-zinc-100 bg-zinc-50/70 p-4 transition hover:border-red-300 hover:bg-white">
               <span className="text-xs font-bold text-zinc-800 bg-zinc-200 px-2 py-0.5 rounded">
                 Google Sheets
               </span>
@@ -145,7 +145,7 @@ export default function HeroSection({ onOpenBooking, onOpenDiagnosis }: HeroSect
               </p>
             </div>
 
-            <div className="rounded-2xl border border-zinc-100 bg-zinc-50/70 p-4 transition hover:border-orange-300 hover:bg-white">
+            <div className="rounded-2xl border border-zinc-100 bg-zinc-50/70 p-4 transition hover:border-red-300 hover:bg-white">
               <span className="text-xs font-bold text-zinc-800 bg-zinc-200 px-2 py-0.5 rounded">
                 Slides & Custom
               </span>

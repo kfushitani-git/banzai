@@ -105,7 +105,7 @@ export default function CurriculumSection() {
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight">
             現場で即使えるスキルだけを凝縮した<br />
-            <span className="text-orange-600">実践型カリキュラム</span>
+            <span className="text-red-600">実践型カリキュラム</span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-zinc-600">
             受講者のITスキルに合わせて講義と演習の比率を柔軟に調整します。
@@ -146,12 +146,12 @@ export default function CurriculumSection() {
                 className="rounded-2xl border border-zinc-200 bg-white p-5 sm:p-6 shadow-xs flex flex-col md:flex-row gap-5 items-start md:items-center justify-between hover:border-zinc-300 transition"
               >
                 <div className="flex items-start gap-4 flex-1">
-                  <div className="p-3 rounded-xl bg-zinc-100 text-orange-600 shrink-0 border border-zinc-200">
+                  <div className="p-3 rounded-xl bg-zinc-100 text-red-600 shrink-0 border border-zinc-200">
                     <Icon className="w-5 h-5" />
                   </div>
                   <div>
                     <div className="flex flex-wrap items-center gap-2 mb-1">
-                      <span className="text-[11px] font-mono font-black text-orange-600">
+                      <span className="text-[11px] font-mono font-black text-red-600">
                         {mod.step}
                       </span>
                       <span className="text-[10px] font-bold text-zinc-600 bg-zinc-100 px-2 py-0.5 rounded">
@@ -173,7 +173,7 @@ export default function CurriculumSection() {
                   <ul className="space-y-1.5">
                     {mod.items.map((it, iIdx) => (
                       <li key={iIdx} className="flex items-start gap-2 text-xs text-zinc-700">
-                        <Check className="w-3.5 h-3.5 text-orange-600 shrink-0 mt-0.5 stroke-[2.5]" />
+                        <Check className="w-3.5 h-3.5 text-red-600 shrink-0 mt-0.5 stroke-[2.5]" />
                         <span className="leading-tight">{it}</span>
                       </li>
                     ))}
@@ -185,7 +185,7 @@ export default function CurriculumSection() {
         </div>
 
         {/* Customization Callout */}
-        <div className="mt-8 max-w-4xl mx-auto text-center p-4 rounded-xl bg-orange-50 border border-orange-200 text-xs text-zinc-700">
+        <div className="mt-8 max-w-4xl mx-auto text-center p-4 rounded-xl bg-red-50 border border-red-200 text-xs text-zinc-700">
           💡 <strong>自社業務に合わせたカリキュラムの調整・カスタマイズは無料</strong>です。
           「営業部門のメールや提案書を中心に」「スプレッドシートの集計に特化したい」などご希望をお聞かせください。
         </div>

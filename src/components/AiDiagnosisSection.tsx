@@ -130,12 +130,12 @@ export default function AiDiagnosisSection({ onApplyWithDiagnosis }: AiDiagnosis
   const currentQ = questions[currentStep - 1];
 
   return (
-    <section id="diagnosis" className="py-16 sm:py-24 bg-gradient-to-b from-white via-orange-50/30 to-slate-50 relative">
+    <section id="diagnosis" className="py-16 sm:py-24 bg-gradient-to-b from-white via-red-50/30 to-slate-50 relative">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-1.5 rounded-full bg-orange-100 text-orange-800 px-4 py-1.5 text-xs font-bold mb-3 border border-orange-200">
-            <Sparkles className="w-3.5 h-3.5 text-orange-600" />
+          <div className="inline-flex items-center gap-1.5 rounded-full bg-red-100 text-red-800 px-4 py-1.5 text-xs font-bold mb-3 border border-red-200">
+            <Sparkles className="w-3.5 h-3.5 text-red-600" />
             カンタン4問・登録不要で即診断
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -159,7 +159,7 @@ export default function AiDiagnosisSection({ onApplyWithDiagnosis }: AiDiagnosis
                 </div>
                 <div className="h-2 w-full rounded-full bg-slate-100 overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-red-500 to-orange-500 transition-all duration-300 ease-out"
+                    className="h-full bg-gradient-to-r from-red-500 to-red-500 transition-all duration-300 ease-out"
                     style={{ width: `${(currentStep / questions.length) * 100}%` }}
                   />
                 </div>
@@ -167,7 +167,7 @@ export default function AiDiagnosisSection({ onApplyWithDiagnosis }: AiDiagnosis
 
               {/* Question Body */}
               <div className="mb-6">
-                <span className="text-xs font-extrabold uppercase tracking-wider text-orange-600">
+                <span className="text-xs font-extrabold uppercase tracking-wider text-red-600">
                   STEP 0{currentStep}
                 </span>
                 <h3 className="text-lg sm:text-2xl font-bold text-slate-900 mt-1">
@@ -184,15 +184,15 @@ export default function AiDiagnosisSection({ onApplyWithDiagnosis }: AiDiagnosis
                   <button
                     key={idx}
                     onClick={() => handleSelect(currentQ.field, option.label)}
-                    className="flex items-center gap-4 rounded-2xl border-2 border-slate-100 bg-slate-50/60 p-4 sm:p-5 text-left transition-all hover:border-orange-500 hover:bg-orange-50/40 hover:shadow-sm group focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    className="flex items-center gap-4 rounded-2xl border-2 border-slate-100 bg-slate-50/60 p-4 sm:p-5 text-left transition-all hover:border-red-500 hover:bg-red-50/40 hover:shadow-sm group focus:outline-none focus:ring-2 focus:ring-red-500"
                   >
                     <span className="text-2xl shrink-0 p-2 rounded-xl bg-white shadow-xs group-hover:scale-110 transition-transform">
                       {option.icon}
                     </span>
-                    <span className="text-sm sm:text-base font-semibold text-slate-800 group-hover:text-orange-950 flex-1">
+                    <span className="text-sm sm:text-base font-semibold text-slate-800 group-hover:text-red-950 flex-1">
                       {option.label}
                     </span>
-                    <ArrowRight className="w-5 h-5 text-slate-300 group-hover:text-orange-600 group-hover:translate-x-1 transition-all shrink-0" />
+                    <ArrowRight className="w-5 h-5 text-slate-300 group-hover:text-red-600 group-hover:translate-x-1 transition-all shrink-0" />
                   </button>
                 ))}
               </div>
@@ -217,12 +217,12 @@ export default function AiDiagnosisSection({ onApplyWithDiagnosis }: AiDiagnosis
 
               {/* Metrics Result Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                <div className="rounded-2xl border border-orange-200 bg-gradient-to-br from-orange-50 to-amber-50/40 p-6 text-center md:text-left">
-                  <div className="flex items-center justify-center md:justify-start gap-2 text-xs font-bold text-orange-800 mb-2">
-                    <Clock className="w-4 h-4 text-orange-600" />
+                <div className="rounded-2xl border border-red-200 bg-gradient-to-br from-red-50 to-red-50/40 p-6 text-center md:text-left">
+                  <div className="flex items-center justify-center md:justify-start gap-2 text-xs font-bold text-red-800 mb-2">
+                    <Clock className="w-4 h-4 text-red-600" />
                     想定される業務時間削減効果
                   </div>
-                  <div className="text-2xl sm:text-3xl font-black text-orange-600">
+                  <div className="text-2xl sm:text-3xl font-black text-red-600">
                     {getResult().workTimeSaved}
                   </div>
                   <p className="mt-2 text-xs text-slate-600">
@@ -247,7 +247,7 @@ export default function AiDiagnosisSection({ onApplyWithDiagnosis }: AiDiagnosis
               {/* Special Offer Box */}
               <div className="rounded-2xl bg-slate-900 text-white p-5 sm:p-6 mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="text-center sm:text-left">
-                  <div className="inline-flex items-center gap-1.5 rounded-md bg-orange-500/20 text-orange-400 border border-orange-500/30 px-2.5 py-0.5 text-xs font-bold mb-1">
+                  <div className="inline-flex items-center gap-1.5 rounded-md bg-red-500/20 text-red-400 border border-red-500/30 px-2.5 py-0.5 text-xs font-bold mb-1">
                     診断特典プレゼント
                   </div>
                   <h4 className="text-sm sm:text-base font-bold text-white">
@@ -260,7 +260,7 @@ export default function AiDiagnosisSection({ onApplyWithDiagnosis }: AiDiagnosis
 
                 <button
                   onClick={() => onApplyWithDiagnosis(getResult())}
-                  className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-orange-500 px-6 py-3.5 text-sm font-bold text-white shadow-lg hover:brightness-110 active:scale-95 transition-all"
+                  className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-red-500 px-6 py-3.5 text-sm font-bold text-white shadow-lg hover:brightness-110 active:scale-95 transition-all"
                 >
                   この診断結果で無料相談する
                   <ArrowRight className="w-4 h-4" />

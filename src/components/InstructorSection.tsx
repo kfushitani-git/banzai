@@ -28,8 +28,8 @@ export default function InstructorSection() {
 
             {/* Credibility Copy & Achievements */}
             <div className="flex-1 text-center md:text-left">
-              <div className="inline-flex items-center gap-1.5 rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-xs font-bold text-orange-800 mb-2.5">
-                <Award className="w-3.5 h-3.5 text-orange-600" />
+              <div className="inline-flex items-center gap-1.5 rounded-full border border-red-200 bg-red-50 px-3 py-1 text-xs font-bold text-red-800 mb-2.5">
+                <Award className="w-3.5 h-3.5 text-red-600" />
                 Google AI Professional 認定証取得済み
               </div>
 
@@ -57,11 +57,11 @@ export default function InstructorSection() {
 
                 <div className="rounded-2xl border border-zinc-200 bg-zinc-50/60 p-3.5">
                   <div className="text-[11px] font-bold text-zinc-500 flex items-center gap-1">
-                    <Users className="w-3.5 h-3.5 text-orange-600" />
+                    <Users className="w-3.5 h-3.5 text-red-600" />
                     研修受講実績
                   </div>
-                  <div className="text-xl sm:text-2xl font-black text-orange-600 mt-0.5">
-                    約60<span className="text-xs font-semibold text-orange-800 ml-0.5">名</span>
+                  <div className="text-xl sm:text-2xl font-black text-red-600 mt-0.5">
+                    約60<span className="text-xs font-semibold text-red-800 ml-0.5">名</span>
                   </div>
                 </div>
 

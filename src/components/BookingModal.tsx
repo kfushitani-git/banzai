@@ -58,7 +58,7 @@ export default function BookingModal({
         {/* Modal Header */}
         <div className="px-6 py-4 border-b border-zinc-100 flex items-center justify-between bg-zinc-50/70">
           <div className="flex items-center gap-2">
-            <div className="p-2 rounded-xl bg-orange-100 text-orange-600">
+            <div className="p-2 rounded-xl bg-red-100 text-red-600">
               {isSeminar ? <Video className="w-4 h-4" /> : <Calendar className="w-4 h-4" />}
             </div>
             <div>
@@ -84,9 +84,9 @@ export default function BookingModal({
             <form onSubmit={handleSubmit} className="space-y-3.5">
               {/* Diagnosis Badge if provided */}
               {initialData?.workTimeSaved && (
-                <div className="rounded-xl border border-orange-200 bg-orange-50/70 p-3 text-xs text-zinc-700 mb-1">
-                  <div className="font-bold text-orange-900 flex items-center gap-1 mb-0.5">
-                    <Sparkles className="w-3.5 h-3.5 text-orange-600" />
+                <div className="rounded-xl border border-red-200 bg-red-50/70 p-3 text-xs text-zinc-700 mb-1">
+                  <div className="font-bold text-red-900 flex items-center gap-1 mb-0.5">
+                    <Sparkles className="w-3.5 h-3.5 text-red-600" />
                     30秒診断結果を引き継ぎました
                   </div>
                   <p className="text-[11px] text-zinc-600">
@@ -97,7 +97,7 @@ export default function BookingModal({
 
               <div>
                 <label className="block text-xs font-bold text-zinc-700 mb-1">
-                  貴社名 <span className="text-orange-600">*</span>
+                  貴社名 <span className="text-red-600">*</span>
                 </label>
                 <div className="relative">
                   <Building className="w-4 h-4 text-zinc-400 absolute left-3 top-3" />
@@ -107,14 +107,14 @@ export default function BookingModal({
                     placeholder="例：FUSHITANI株式会社"
                     value={formData.companyName}
                     onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
-                    className="w-full pl-9 pr-3 py-2 text-xs sm:text-sm rounded-xl border border-zinc-200 focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none"
+                    className="w-full pl-9 pr-3 py-2 text-xs sm:text-sm rounded-xl border border-zinc-200 focus:border-red-500 focus:ring-1 focus:ring-red-500 outline-none"
                   />
                 </div>
               </div>
 
               <div>
                 <label className="block text-xs font-bold text-zinc-700 mb-1">
-                  ご担当者様 お名前 <span className="text-orange-600">*</span>
+                  ご担当者様 お名前 <span className="text-red-600">*</span>
                 </label>
                 <div className="relative">
                   <User className="w-4 h-4 text-zinc-400 absolute left-3 top-3" />
@@ -124,7 +124,7 @@ export default function BookingModal({
                     placeholder="例：山田 太郎"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full pl-9 pr-3 py-2 text-xs sm:text-sm rounded-xl border border-zinc-200 focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none"
+                    className="w-full pl-9 pr-3 py-2 text-xs sm:text-sm rounded-xl border border-zinc-200 focus:border-red-500 focus:ring-1 focus:ring-red-500 outline-none"
                   />
                 </div>
               </div>
@@ -132,7 +132,7 @@ export default function BookingModal({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-xs font-bold text-zinc-700 mb-1">
-                    メールアドレス <span className="text-orange-600">*</span>
+                    メールアドレス <span className="text-red-600">*</span>
                   </label>
                   <div className="relative">
                     <Mail className="w-4 h-4 text-zinc-400 absolute left-3 top-3" />
@@ -142,7 +142,7 @@ export default function BookingModal({
                       placeholder="name@company.co.jp"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full pl-9 pr-3 py-2 text-xs sm:text-sm rounded-xl border border-zinc-200 focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none"
+                      className="w-full pl-9 pr-3 py-2 text-xs sm:text-sm rounded-xl border border-zinc-200 focus:border-red-500 focus:ring-1 focus:ring-red-500 outline-none"
                     />
                   </div>
                 </div>
@@ -158,7 +158,7 @@ export default function BookingModal({
                       placeholder="086-000-0000"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full pl-9 pr-3 py-2 text-xs sm:text-sm rounded-xl border border-zinc-200 focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none"
+                      className="w-full pl-9 pr-3 py-2 text-xs sm:text-sm rounded-xl border border-zinc-200 focus:border-red-500 focus:ring-1 focus:ring-red-500 outline-none"
                     />
                   </div>
                 </div>
@@ -173,7 +173,7 @@ export default function BookingModal({
                     <select
                       value={formData.location}
                       onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                      className="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-zinc-200 focus:border-orange-500 outline-none bg-white"
+                      className="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-zinc-200 focus:border-red-500 outline-none bg-white"
                     >
                       <option value="岡山市内">岡山市内</option>
                       <option value="倉敷市内">倉敷市内</option>
@@ -190,7 +190,7 @@ export default function BookingModal({
                     <select
                       value={formData.planInterest}
                       onChange={(e) => setFormData({ ...formData, planInterest: e.target.value })}
-                      className="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-zinc-200 focus:border-orange-500 outline-none bg-white"
+                      className="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-zinc-200 focus:border-red-500 outline-none bg-white"
                     >
                       <option value="Google Workspace × Gemini 実践コース">Google Workspace × Gemini 実践コース</option>
                       <option value="1Day 集中ワークショップ">1Day 集中ワークショップ</option>
@@ -215,14 +215,14 @@ export default function BookingModal({
                   }
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full p-3 text-xs sm:text-sm rounded-xl border border-zinc-200 focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none resize-none"
+                  className="w-full p-3 text-xs sm:text-sm rounded-xl border border-zinc-200 focus:border-red-500 focus:ring-1 focus:ring-red-500 outline-none resize-none"
                 />
               </div>
 
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-zinc-900 py-3.5 text-xs sm:text-sm font-bold text-white hover:bg-orange-600 transition active:scale-95"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-zinc-900 py-3.5 text-xs sm:text-sm font-bold text-white hover:bg-red-600 transition active:scale-95"
                 >
                   {isSeminar ? "無料セミナーに申し込む" : "無料相談・お見積りを予約する"}
                   <ArrowRight className="w-4 h-4" />
@@ -235,7 +235,7 @@ export default function BookingModal({
             </form>
           ) : (
             <div className="py-8 text-center animate-in zoom-in-95 duration-200">
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-orange-100 text-orange-600 mb-3">
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-red-100 text-red-600 mb-3">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
               <h4 className="text-lg font-bold text-zinc-900">

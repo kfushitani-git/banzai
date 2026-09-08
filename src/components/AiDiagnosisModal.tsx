@@ -141,7 +141,7 @@ export default function AiDiagnosisModal({
         {/* Header */}
         <div className="px-6 py-4 border-b border-zinc-100 flex items-center justify-between bg-zinc-50/70">
           <div className="flex items-center gap-2">
-            <div className="p-1.5 rounded-lg bg-orange-100 text-orange-600">
+            <div className="p-1.5 rounded-lg bg-red-100 text-red-600">
               <Sparkles className="w-4 h-4" />
             </div>
             <div>
@@ -173,14 +173,14 @@ export default function AiDiagnosisModal({
                 </div>
                 <div className="h-1.5 w-full rounded-full bg-zinc-100 overflow-hidden">
                   <div
-                    className="h-full bg-orange-500 transition-all duration-300"
+                    className="h-full bg-red-500 transition-all duration-300"
                     style={{ width: `${(currentStep / questions.length) * 100}%` }}
                   />
                 </div>
               </div>
 
               <div className="mb-5">
-                <span className="text-[11px] font-black uppercase text-orange-600 tracking-wider">
+                <span className="text-[11px] font-black uppercase text-red-600 tracking-wider">
                   STEP 0{currentStep}
                 </span>
                 <h4 className="text-base sm:text-lg font-bold text-zinc-900 mt-0.5 leading-snug">
@@ -196,10 +196,10 @@ export default function AiDiagnosisModal({
                   <button
                     key={idx}
                     onClick={() => handleSelect(currentQ.field, opt.label)}
-                    className="w-full flex items-center justify-between gap-3 rounded-xl border border-zinc-200 bg-white p-3.5 text-left text-xs sm:text-sm font-semibold text-zinc-800 hover:border-orange-500 hover:bg-orange-50/30 transition group"
+                    className="w-full flex items-center justify-between gap-3 rounded-xl border border-zinc-200 bg-white p-3.5 text-left text-xs sm:text-sm font-semibold text-zinc-800 hover:border-red-500 hover:bg-red-50/30 transition group"
                   >
                     <span>{opt.label}</span>
-                    <ArrowRight className="w-4 h-4 text-zinc-300 group-hover:text-orange-600 shrink-0 transition-transform group-hover:translate-x-0.5" />
+                    <ArrowRight className="w-4 h-4 text-zinc-300 group-hover:text-red-600 shrink-0 transition-transform group-hover:translate-x-0.5" />
                   </button>
                 ))}
               </div>
@@ -207,7 +207,7 @@ export default function AiDiagnosisModal({
           ) : (
             /* Result */
             <div className="text-center animate-in zoom-in-95 duration-200">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-orange-100 text-orange-600 mb-3">
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-red-100 text-red-600 mb-3">
                 <Award className="w-6 h-6" />
               </div>
               <h4 className="text-lg font-black text-zinc-900">
@@ -218,9 +218,9 @@ export default function AiDiagnosisModal({
               </p>
 
               <div className="mt-5 space-y-3 text-left">
-                <div className="rounded-2xl border border-orange-200 bg-orange-50/50 p-4">
-                  <div className="flex items-center gap-1.5 text-xs font-bold text-orange-800 mb-1">
-                    <Clock className="w-3.5 h-3.5 text-orange-600" />
+                <div className="rounded-2xl border border-red-200 bg-red-50/50 p-4">
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-red-800 mb-1">
+                    <Clock className="w-3.5 h-3.5 text-red-600" />
                     想定される業務時間削減効果
                   </div>
                   <div className="text-xl font-black text-zinc-900">
@@ -248,7 +248,7 @@ export default function AiDiagnosisModal({
                     onApplyWithDiagnosis(getResult());
                     onClose();
                   }}
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-zinc-900 py-3 text-xs sm:text-sm font-bold text-white hover:bg-orange-600 transition"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-zinc-900 py-3 text-xs sm:text-sm font-bold text-white hover:bg-red-600 transition"
                 >
                   この診断結果を持って無料相談する
                   <ArrowRight className="w-4 h-4" />

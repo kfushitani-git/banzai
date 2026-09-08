@@ -39,7 +39,7 @@ export default function ProcessSection() {
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight">
             お問い合わせから研修実施までの<br />
-            <span className="text-orange-600">シンプルな4ステップ</span>
+            <span className="text-red-600">シンプルな4ステップ</span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-zinc-600">
             最短2週間でのスピード開催も可能。社内稟議に必要な資料作成もお手伝いいたします。
@@ -57,7 +57,7 @@ export default function ProcessSection() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xl font-black text-orange-600 font-mono">
+                    <span className="text-xl font-black text-red-600 font-mono">
                       {step.num}
                     </span>
                     <div className="p-2.5 rounded-xl bg-zinc-100 text-zinc-700">

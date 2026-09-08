@@ -18,13 +18,13 @@ body {
   overflow-x: hidden;
 }
 
-/* Minimalist Orange & Monochrome Accents */
+/* Minimalist Red & Monochrome Accents */
 .text-gradient {
-  background: linear-gradient(135deg, #EA580C 0%, #F97316 100%);
+  background: linear-gradient(135deg, #DC2626 0%, #F5333F 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .bg-radial-orange {
-  background: radial-gradient(circle at 50% 0%, rgba(249, 115, 22, 0.05) 0%, transparent 60%);
+  background: radial-gradient(circle at 50% 0%, rgba(220, 38, 38, 0.05) 0%, transparent 60%);
 }

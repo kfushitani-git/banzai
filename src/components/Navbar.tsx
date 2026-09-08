@@ -25,18 +25,18 @@ export default function Navbar({ onOpenBooking, onOpenDiagnosis }: NavbarProps) 
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 h-20">
         {/* Brand Logo & Tagline */}
         <a href="#" className="flex items-center gap-3">
-          <div className="relative h-11 w-32 sm:w-36 flex items-center">
+          <div className="relative h-10 w-40 sm:w-52 flex items-center">
             <Image
-              src="/banz-ai-logo.png"
-              alt="banz-ai"
-              width={144}
-              height={44}
+              src="/fushitani-ai-logo.png"
+              alt="FUSHITANI AI支援"
+              width={207}
+              height={60}
               className="object-contain object-left"
               priority
             />
           </div>
           <div className="hidden sm:flex flex-col border-l border-zinc-200 pl-3">
-            <span className="text-[11px] font-bold text-orange-600 tracking-wide">
+            <span className="text-[11px] font-bold text-red-600 tracking-wide">
               岡山特化・対面講師派遣型
             </span>
             <span className="text-xs font-semibold text-zinc-700">
@@ -51,7 +51,7 @@ export default function Navbar({ onOpenBooking, onOpenDiagnosis }: NavbarProps) 
             <a
               key={link.name}
               href={link.href}
-              className="transition-colors hover:text-orange-600 hover:font-semibold"
+              className="transition-colors hover:text-red-600 hover:font-semibold"
             >
               {link.name}
             </a>
@@ -62,15 +62,15 @@ export default function Navbar({ onOpenBooking, onOpenDiagnosis }: NavbarProps) 
         <div className="flex items-center gap-3">
           <button
             onClick={onOpenDiagnosis}
-            className="hidden lg:inline-flex items-center gap-1.5 rounded-full border border-orange-300 bg-orange-50/60 px-4 py-2 text-xs font-bold text-orange-700 transition hover:bg-orange-100"
+            className="hidden lg:inline-flex items-center gap-1.5 rounded-full border border-red-300 bg-red-50/60 px-4 py-2 text-xs font-bold text-red-700 transition hover:bg-red-100"
           >
-            <Sparkles className="w-3.5 h-3.5 text-orange-600" />
+            <Sparkles className="w-3.5 h-3.5 text-red-600" />
             30秒診断
           </button>
 
           <button
             onClick={onOpenBooking}
-            className="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-5 py-2.5 text-xs sm:text-sm font-bold text-white shadow-sm transition hover:bg-orange-600 active:scale-95"
+            className="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-5 py-2.5 text-xs sm:text-sm font-bold text-white shadow-sm transition hover:bg-red-600 active:scale-95"
           >
             <Calendar className="w-4 h-4" />
             無料相談・お見積り
@@ -98,7 +98,7 @@ export default function Navbar({ onOpenBooking, onOpenDiagnosis }: NavbarProps) 
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="py-1 hover:text-orange-600 border-b border-zinc-100 pb-2"
+                className="py-1 hover:text-red-600 border-b border-zinc-100 pb-2"
               >
                 {link.name}
               </a>
@@ -109,9 +109,9 @@ export default function Navbar({ onOpenBooking, onOpenDiagnosis }: NavbarProps) 
                   setIsMobileMenuOpen(false);
                   onOpenDiagnosis();
                 }}
-                className="w-full inline-flex items-center justify-center gap-2 rounded-xl border border-orange-300 bg-orange-50 py-2.5 text-xs font-bold text-orange-700"
+                className="w-full inline-flex items-center justify-center gap-2 rounded-xl border border-red-300 bg-red-50 py-2.5 text-xs font-bold text-red-700"
               >
-                <Sparkles className="w-3.5 h-3.5 text-orange-600" />
+                <Sparkles className="w-3.5 h-3.5 text-red-600" />
                 30秒AI活用度を無料診断する
               </button>
               <button

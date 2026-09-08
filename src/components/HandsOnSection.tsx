@@ -58,12 +58,12 @@ export default function HandsOnSection({ onOpenBooking }: HandsOnSectionProps) {
     <section id="handson" className="py-16 sm:py-24 bg-white relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-1.5 rounded-full border border-orange-200 bg-orange-50 px-3.5 py-1 text-xs font-bold text-orange-800 mb-3">
+          <div className="inline-flex items-center gap-1.5 rounded-full border border-red-200 bg-red-50 px-3.5 py-1 text-xs font-bold text-red-800 mb-3">
             対面研修の強み
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight">
-            なぜ、banz-AIは<br />
-            <span className="text-orange-600">「岡山での対面・現場ハンズオン」</span>にこだわるのか？
+            なぜ、FUSHITANIのAI研修は<br />
+            <span className="text-red-600">「岡山での対面・現場ハンズオン」</span>にこだわるのか？
           </h2>
           <p className="mt-3 text-sm sm:text-base text-zinc-600">
             知識をインプットするだけの講義ではなく、社員が手を動かし「できた！」という成功体験をオフィスで作るからこそ、確実に定着します。
@@ -77,11 +77,11 @@ export default function HandsOnSection({ onOpenBooking }: HandsOnSectionProps) {
             return (
               <div
                 key={idx}
-                className="rounded-3xl border border-zinc-200 bg-white p-7 sm:p-8 shadow-xs hover:border-orange-300 hover:shadow-md transition flex flex-col justify-between"
+                className="rounded-3xl border border-zinc-200 bg-white p-7 sm:p-8 shadow-xs hover:border-red-300 hover:shadow-md transition flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-black text-orange-600 font-mono bg-orange-50 border border-orange-200 px-2.5 py-0.5 rounded-md">
+                    <span className="text-xs font-black text-red-600 font-mono bg-red-50 border border-red-200 px-2.5 py-0.5 rounded-md">
                       FEATURE {item.badge}
                     </span>
                     <div className="p-2.5 rounded-xl bg-zinc-100 text-zinc-800">
@@ -102,7 +102,7 @@ export default function HandsOnSection({ onOpenBooking }: HandsOnSectionProps) {
                   <ul className="space-y-2">
                     {item.points.map((pt, pIdx) => (
                       <li key={pIdx} className="flex items-start gap-2 text-xs text-zinc-700">
-                        <Check className="w-3.5 h-3.5 text-orange-600 shrink-0 mt-0.5 stroke-[2.5]" />
+                        <Check className="w-3.5 h-3.5 text-red-600 shrink-0 mt-0.5 stroke-[2.5]" />
                         <span>{pt}</span>
                       </li>
                     ))}
@@ -115,11 +115,11 @@ export default function HandsOnSection({ onOpenBooking }: HandsOnSectionProps) {
 
         {/* Target Fit Highlight Box */}
         <div className="mt-12 rounded-3xl bg-zinc-50 border border-zinc-200 p-6 sm:p-7 max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-5">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-orange-500 text-white">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-red-500 text-white">
             <Building className="w-6 h-6" />
           </div>
           <div className="flex-1 text-center sm:text-left">
-            <div className="text-xs font-bold text-orange-600">受講対象企業様について</div>
+            <div className="text-xs font-bold text-red-600">受講対象企業様について</div>
             <h4 className="text-sm sm:text-base font-bold text-zinc-900 mt-0.5">
               特に「Google Workspace Business Standard」を導入済みの企業様に強く推奨しております
             </h4>
@@ -133,7 +133,7 @@ export default function HandsOnSection({ onOpenBooking }: HandsOnSectionProps) {
         {/* Local Callout Banner */}
         <div className="mt-6 rounded-3xl bg-zinc-900 p-7 sm:p-8 text-white flex flex-col sm:flex-row items-center justify-between gap-6 max-w-5xl mx-auto">
           <div>
-            <div className="text-xs font-bold text-orange-400 mb-1">
+            <div className="text-xs font-bold text-red-400 mb-1">
               岡山市・倉敷市をはじめ岡山県内全域対応
             </div>
             <h4 className="text-base sm:text-xl font-bold">
@@ -145,7 +145,7 @@ export default function HandsOnSection({ onOpenBooking }: HandsOnSectionProps) {
           </div>
           <button
             onClick={onOpenBooking}
-            className="shrink-0 inline-flex items-center gap-2 rounded-full bg-orange-600 px-6 py-3 text-xs sm:text-sm font-bold text-white hover:bg-orange-700 transition active:scale-95"
+            className="shrink-0 inline-flex items-center gap-2 rounded-full bg-red-600 px-6 py-3 text-xs sm:text-sm font-bold text-white hover:bg-red-700 transition active:scale-95"
           >
             対面研修の相談・見積もり
             <ArrowRight className="w-4 h-4" />

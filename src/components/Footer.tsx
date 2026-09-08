@@ -8,27 +8,27 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 pb-8 border-b border-zinc-100">
           <div className="flex flex-col items-center md:items-start gap-3">
-            <div className="relative h-10 w-32">
+            <div className="relative h-10 w-44">
               <Image
-                src="/banz-ai-logo.png"
-                alt="banz-ai"
-                width={128}
-                height={40}
+                src="/fushitani-ai-logo.png"
+                alt="FUSHITANI AI支援"
+                width={173}
+                height={50}
                 className="object-contain object-left"
               />
             </div>
             <p className="text-zinc-500 text-xs text-center md:text-left leading-relaxed">
-              対面型 Google Workspace × Gemini 実践AI研修「banz-AI」<br />
+              岡山の中小企業向け 対面型 Google Workspace × Gemini 実践AI研修<br />
               <span className="text-zinc-700 font-semibold">運営会社：FUSHITANI株式会社（FUSHITANI Co., Ltd.）</span>
             </p>
           </div>
 
           <div className="flex flex-wrap justify-center md:justify-end gap-6 text-zinc-600 font-medium">
-            <a href="#features" className="hover:text-orange-600 transition">特長</a>
-            <a href="#handson" className="hover:text-orange-600 transition">対面研修の強み</a>
-            <a href="#curriculum" className="hover:text-orange-600 transition">カリキュラム</a>
-            <a href="#pricing" className="hover:text-orange-600 transition">プラン</a>
-            <a href="#faq" className="hover:text-orange-600 transition">FAQ</a>
+            <a href="#features" className="hover:text-red-600 transition">特長</a>
+            <a href="#handson" className="hover:text-red-600 transition">対面研修の強み</a>
+            <a href="#curriculum" className="hover:text-red-600 transition">カリキュラム</a>
+            <a href="#pricing" className="hover:text-red-600 transition">プラン</a>
+            <a href="#faq" className="hover:text-red-600 transition">FAQ</a>
           </div>
         </div>
 

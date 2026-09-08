@@ -45,19 +45,19 @@ export default function PricingSection({ onOpenBooking }: PricingSectionProps) {
     <section id="pricing" className="py-16 sm:py-24 bg-white relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-1.5 rounded-full border border-orange-200 bg-orange-50 px-3.5 py-1 text-xs font-bold text-orange-800 mb-3">
+          <div className="inline-flex items-center gap-1.5 rounded-full border border-red-200 bg-red-50 px-3.5 py-1 text-xs font-bold text-red-800 mb-3">
             プラン・お見積り
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight">
             受講人数や課題に合わせた<br />
-            <span className="text-orange-600">柔軟な研修プラン</span>
+            <span className="text-red-600">柔軟な研修プラン</span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-zinc-600">
             受講人数、対象部門、ご希望の日程に合わせて個別にお見積書を作成いたします。<br className="hidden sm:inline" />
             まずはお気軽な無料相談にてご要望をお聞かせください。
           </p>
           <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-xs text-zinc-700">
-            <span className="font-bold text-orange-600">推奨環境:</span>
+            <span className="font-bold text-red-600">推奨環境:</span>
             <span>弊社も社内で活用している「Google Workspace Business Standard」導入企業様に最適です</span>
           </div>
         </div>
@@ -69,12 +69,12 @@ export default function PricingSection({ onOpenBooking }: PricingSectionProps) {
               key={idx}
               className={`rounded-3xl p-7 sm:p-8 flex flex-col justify-between transition-all relative ${
                 plan.highlight
-                  ? "border-2 border-orange-500 bg-white shadow-xl shadow-orange-500/10 ring-1 ring-orange-500"
+                  ? "border-2 border-red-500 bg-white shadow-xl shadow-red-500/10 ring-1 ring-red-500"
                   : "border border-zinc-200 bg-white shadow-sm hover:border-zinc-300"
               }`}
             >
               {plan.highlight && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-orange-600 text-white text-xs font-bold px-4 py-1 rounded-full shadow-xs">
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-red-600 text-white text-xs font-bold px-4 py-1 rounded-full shadow-xs">
                   {plan.badge}
                 </div>
               )}
@@ -94,7 +94,7 @@ export default function PricingSection({ onOpenBooking }: PricingSectionProps) {
                 </p>
 
                 <div className="mt-4 border-y border-zinc-100 py-3.5">
-                  <div className="text-xs font-bold text-orange-600">
+                  <div className="text-xs font-bold text-red-600">
                     料金：要お問い合わせ（無料お見積り）
                   </div>
                   <div className="text-[11px] text-zinc-400 mt-0.5">
@@ -106,7 +106,7 @@ export default function PricingSection({ onOpenBooking }: PricingSectionProps) {
                 <ul className="mt-6 space-y-2.5">
                   {plan.features.map((feat, fIdx) => (
                     <li key={fIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-zinc-700">
-                      <Check className="w-3.5 h-3.5 text-orange-600 shrink-0 mt-0.5 stroke-[2.5]" />
+                      <Check className="w-3.5 h-3.5 text-red-600 shrink-0 mt-0.5 stroke-[2.5]" />
                       <span>{feat}</span>
                     </li>
                   ))}
@@ -118,7 +118,7 @@ export default function PricingSection({ onOpenBooking }: PricingSectionProps) {
                   onClick={onOpenBooking}
                   className={`w-full py-3.5 px-6 rounded-full text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-2 shadow-xs ${
                     plan.highlight
-                      ? "bg-orange-600 text-white hover:bg-orange-700"
+                      ? "bg-red-600 text-white hover:bg-red-700"
                       : "bg-zinc-900 text-white hover:bg-zinc-800"
                   }`}
                 >
@@ -132,7 +132,7 @@ export default function PricingSection({ onOpenBooking }: PricingSectionProps) {
 
         {/* Subsidy Note (Monochrome + Orange) */}
         <div className="mt-12 max-w-4xl mx-auto rounded-2xl border border-zinc-200 bg-zinc-50 p-5 sm:p-6 flex flex-col sm:flex-row items-center gap-4">
-          <div className="p-3 rounded-xl bg-orange-100 text-orange-600 shrink-0">
+          <div className="p-3 rounded-xl bg-red-100 text-red-600 shrink-0">
             <Coins className="w-6 h-6" />
           </div>
           <div className="text-center sm:text-left flex-1">
