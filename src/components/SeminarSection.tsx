@@ -36,19 +36,20 @@ export default function SeminarSection({ onOpenSeminar }: SeminarSectionProps) {
         </div>
 
         {/* Seminar Card */}
-        <div className="mx-auto max-w-5xl overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-xl shadow-zinc-900/5">
-          <div className="grid md:grid-cols-2">
-            {/* Banner */}
-            <div className="relative aspect-[1200/630] md:aspect-auto md:min-h-[280px] bg-zinc-100">
-              <Image
-                src="/seminar-banner.jpg"
-                alt={`${SEMINAR.title} ${SEMINAR.subtitle}｜${SEMINAR.date} ${SEMINAR.time} オンライン無料セミナー`}
-                fill
-                sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover object-left"
-              />
-            </div>
+        <div className="mx-auto max-w-3xl overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-xl shadow-zinc-900/5">
+          {/* Banner (full image, no crop) */}
+          <div className="relative w-full aspect-[1400/735] bg-zinc-100">
+            <Image
+              src="/seminar-banner.jpg"
+              alt={`${SEMINAR.title} ${SEMINAR.subtitle}｜${SEMINAR.date} ${SEMINAR.time} オンライン無料セミナー`}
+              fill
+              sizes="(min-width: 768px) 768px, 100vw"
+              className="object-contain"
+              priority
+            />
+          </div>
 
+          <div className="border-t border-zinc-100">
             {/* Details */}
             <div className="p-6 sm:p-8 flex flex-col">
               <div className="flex items-baseline gap-2 flex-wrap">
