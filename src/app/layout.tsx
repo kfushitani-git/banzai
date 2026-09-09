@@ -43,6 +43,9 @@ export const metadata: Metadata = {
     images: ["/ogp.png"],
   },
   robots: { index: true, follow: true },
+  verification: {
+    google: "ggtUuHxVdiJvl5BrfGQKq4CTArLeuH8ZMApKkbZ8h6Y",
+  },
 };
 
 const jsonLd = {
