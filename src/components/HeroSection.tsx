@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles, Calendar, ArrowRight, ShieldCheck, Clock, Award, Building2, CheckCircle2 } from "lucide-react";
+import { Sparkles, Calendar, ArrowRight, ShieldCheck, Award, Building2, CheckCircle2 } from "lucide-react";
 
 interface HeroSectionProps {
   onOpenBooking: () => void;
@@ -68,7 +68,7 @@ export default function HeroSection({ onOpenBooking, onOpenDiagnosis }: HeroSect
         </p>
 
         {/* Trust Badges */}
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto">
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto">
           <div className="flex items-center gap-3 rounded-2xl bg-zinc-50 p-3.5 border border-zinc-200">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-100 text-red-600">
               <Award className="w-5 h-5" />
@@ -86,16 +86,6 @@ export default function HeroSection({ onOpenBooking, onOpenDiagnosis }: HeroSect
             <div>
               <div className="text-[11px] text-zinc-500 font-medium">支援実績</div>
               <div className="text-sm font-bold text-zinc-950">6社 / 約60名受講</div>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3 rounded-2xl bg-zinc-50 p-3.5 border border-zinc-200">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-100 text-red-600">
-              <Clock className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="text-[11px] text-zinc-500 font-medium">業務時間削減</div>
-              <div className="text-sm font-bold text-zinc-950">月平均 45h短縮</div>
             </div>
           </div>
 
