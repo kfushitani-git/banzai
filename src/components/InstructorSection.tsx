@@ -44,7 +44,7 @@ export default function InstructorSection() {
               </p>
 
               {/* Real Track Record Stats */}
-              <div className="mt-6 pt-5 border-t border-zinc-100 grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div className="mt-6 pt-5 border-t border-zinc-100 grid grid-cols-2 gap-4">
                 <div className="rounded-2xl border border-zinc-200 bg-zinc-50/60 p-3.5">
                   <div className="text-[11px] font-bold text-zinc-500 flex items-center gap-1">
                     <Building className="w-3.5 h-3.5 text-zinc-700" />
@@ -62,13 +62,6 @@ export default function InstructorSection() {
                   </div>
                   <div className="text-xl sm:text-2xl font-black text-red-600 mt-0.5">
                     約60<span className="text-xs font-semibold text-red-800 ml-0.5">名</span>
-                  </div>
-                </div>
-
-                <div className="col-span-2 sm:col-span-1 rounded-2xl border border-zinc-200 bg-zinc-50/60 p-3.5 flex flex-col justify-center">
-                  <div className="text-[11px] font-bold text-zinc-500">受講者満足度</div>
-                  <div className="text-xl sm:text-2xl font-black text-zinc-950 mt-0.5">
-                    98.4<span className="text-xs font-semibold text-zinc-600 ml-0.5">%</span>
                   </div>
                 </div>
               </div>
