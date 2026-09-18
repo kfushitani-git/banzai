@@ -9,28 +9,51 @@ export default function InstructorSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl rounded-3xl border border-zinc-200 bg-white p-7 sm:p-10 shadow-sm">
           <div className="flex flex-col md:flex-row items-center gap-8 lg:gap-12">
-            {/* Certificate Badge Visual */}
-            <div className="flex flex-col items-center shrink-0">
-              <div className="relative h-36 w-36 sm:h-44 sm:w-44 flex items-center justify-center p-2 rounded-3xl border-2 border-zinc-100 bg-zinc-50/50 shadow-inner">
-                <Image
-                  src="/google-ai-professional-badge.png"
-                  alt="Google AI Professional Certificate Completion"
-                  width={160}
-                  height={160}
-                  className="object-contain"
-                  priority
-                />
+            {/* Certificate Badge Visuals */}
+            <div className="flex flex-col items-center shrink-0 gap-5">
+              <div className="flex flex-col items-center">
+                <div className="relative h-36 w-36 sm:h-44 sm:w-44 flex items-center justify-center p-2 rounded-3xl border-2 border-zinc-100 bg-zinc-50/50 shadow-inner">
+                  <Image
+                    src="/google-ai-professional-badge.png"
+                    alt="Google AI Professional Certificate Completion"
+                    width={160}
+                    height={160}
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+                <span className="mt-2.5 inline-flex items-center gap-1 text-[11px] font-bold text-zinc-600 bg-zinc-100 px-2.5 py-0.5 rounded-full border border-zinc-200">
+                  Google Career Certificates 認定
+                </span>
               </div>
-              <span className="mt-2.5 inline-flex items-center gap-1 text-[11px] font-bold text-zinc-600 bg-zinc-100 px-2.5 py-0.5 rounded-full border border-zinc-200">
-                Google Career Certificates 認定
-              </span>
+
+              <div className="flex flex-col items-center">
+                <div className="relative h-24 w-24 sm:h-28 sm:w-28 flex items-center justify-center p-1.5 rounded-3xl border-2 border-zinc-100 bg-zinc-50/50 shadow-inner">
+                  <Image
+                    src="/guga-generative-ai-passport-badge.png"
+                    alt="生成AIパスポート認定バッジ（一般社団法人生成AI活用普及協会）"
+                    width={110}
+                    height={110}
+                    className="object-contain"
+                  />
+                </div>
+                <span className="mt-2.5 inline-flex items-center gap-1 text-[11px] font-bold text-zinc-600 bg-zinc-100 px-2.5 py-0.5 rounded-full border border-zinc-200">
+                  生成AI活用普及協会（GUGA）認定
+                </span>
+              </div>
             </div>
 
             {/* Credibility Copy & Achievements */}
             <div className="flex-1 text-center md:text-left">
-              <div className="inline-flex items-center gap-1.5 rounded-full border border-red-200 bg-red-50 px-3 py-1 text-xs font-bold text-red-800 mb-2.5">
-                <Award className="w-3.5 h-3.5 text-red-600" />
-                Google AI Professional 認定証取得済み
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-2.5">
+                <div className="inline-flex items-center gap-1.5 rounded-full border border-red-200 bg-red-50 px-3 py-1 text-xs font-bold text-red-800">
+                  <Award className="w-3.5 h-3.5 text-red-600" />
+                  Google AI Professional 認定証取得済み
+                </div>
+                <div className="inline-flex items-center gap-1.5 rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-xs font-bold text-teal-800">
+                  <Award className="w-3.5 h-3.5 text-teal-600" />
+                  生成AIパスポート（GUGA）取得済み
+                </div>
               </div>
 
               <h3 className="text-xl sm:text-2xl font-black text-zinc-950 tracking-tight leading-snug">
