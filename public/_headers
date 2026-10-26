@@ -1,0 +1,21 @@
+# Cloudflare Pages headers. `next build` (output: "export") copies public/ into out/.
+# Applied to every host this project serves, including the custom domain.
+/*
+  Strict-Transport-Security: max-age=31536000
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; frame-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self'; connect-src 'self'; worker-src blob:; form-action 'self'; upgrade-insecure-requests
+
+# Fingerprinted Next.js chunks, CSS, and self-hosted font files.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Keep the pages.dev duplicate out of search indexes. The custom domain is unchanged.
+# Preview hostnames are a single label (for example <hash>.banzai-3as.pages.dev).
+https://banzai-3as.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.banzai-3as.pages.dev/*
+  X-Robots-Tag: noindex
